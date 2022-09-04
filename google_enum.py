@@ -80,26 +80,13 @@ def write_output_file(output_file, subdomains_result):
 def main():
     banner()
     get_current_datetime()
-    a = [
-        'assistant.google.com',
-        'translate.google.com',
-        'cloud.google.com',
-        'careers.google.com',
-        'play.google.com',
-        'patents.google.com',
-        'blog.google.com',
-        'tv.google.com',
-        'developers.google.com'
-    ]
-    for i in a:
-        print(i)
-    #subdomains_result = get_subdomains_from_google(args.domain)
-    #
-    #if args.output is not None:
-    #    write_output_file(args.output, subdomains_result)
-    #else:
-    #    for subdomain in subdomains_result:
-    #        print(subdomain)
-    #
+    subdomains_result = get_subdomains_from_google(args.domain)
+    
+    if args.output is not None:
+        write_output_file(args.output, subdomains_result)
+    else:
+        for subdomain in subdomains_result:
+            print(subdomain)
+    
 if __name__=='__main__':
     main()
