@@ -1,4 +1,4 @@
-# Trending CVEs
+# Google Enum
 Get subdomains from a given domain using Google Dorks.
 
 # Usage 
