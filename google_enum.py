@@ -8,9 +8,12 @@ Author: psjs97 (https://github.com/psjs97)
 # Libraries
 import os
 import argparse
-from googlesearch import search
 from urllib.parse import urlparse
 from datetime import datetime
+try:
+    from googlesearch import search
+except ImportError:
+    print("No module named 'google' found")
 
 
 # Arguments
@@ -62,7 +65,7 @@ def get_subdomains_from_google(domain):
         google_query = "site:DOMAIN"
         google_query = google_query.replace('DOMAIN', variation)
         user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:104.0) Gecko/20100101 Firefox/104.0'
-        urls_list = list(search(google_query, tld="co.in", num=10, stop=None, pause=30.0, user_agent=user_agent))
+        urls_list = list(search(google_query, tld="co.in", num=10, stop=None, pause=15.0, user_agent=user_agent))
         total_urls_list.extend(urls_list)
 
     subdomains_result = []

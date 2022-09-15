@@ -2,6 +2,7 @@
 Get subdomains from a given domain using Google Dorks.
 
 # Installation
+python -m pip install beautifulsoup4
 python -m pip install google
 
 # Usage 
