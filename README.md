@@ -1,4 +1,4 @@
-# Google Enum
+# GoogleEnum
 Get subdomains from a given domain using Google Dorks.
 
 # Installation
