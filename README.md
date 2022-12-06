@@ -6,7 +6,7 @@ Get subdomains from a given domain using Google Dorks.
 - python -m pip install google
 
 # Usage 
-python google_enum.py [-h] -d DOMAIN [-o OUTPUT]
+- python google_enum.py [-h] -d DOMAIN [-o OUTPUT]
 
 # Example
  ![](google_enum.png)
